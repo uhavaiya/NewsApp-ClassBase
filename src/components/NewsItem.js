@@ -7,8 +7,9 @@ export class NewsItem extends Component {
     return (
       <div className="my-3">
         <div className="card">
-          <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left:"50%"}}>{source}
-          </span>
+          <div style={{ display: "flex", justifyContent: "flex-end", position: "absolute", right: "0" }}>
+            <span class="badge rounded-pill bg-danger">{source}</span>
+          </div>
           <img src={!imageUrl ? "https://media.istockphoto.com/photos/red-stamp-on-a-white-background-breaking-news-picture-id837212290?s=612x612" : imageUrl} className="card-img-top" alt="..." />
           <div div className="card-body">
             <h5 className="card-title">{title}</h5>
@@ -18,7 +19,7 @@ export class NewsItem extends Component {
             <a rel="noreferrer" href={newsUrl} target="_blank" className="btn btn-sm btn-primary">Read More</a>
           </div>
         </div>
-      </div>
+      </div >
     )
   }
 }
